@@ -1,0 +1,57 @@
+ Dfd (c)
+1
+1
+1
+0
+0
+4
+1
+18
+"Ingrese numero 1"
+5
+1
+7
+Numero1
+4
+1
+18
+"Ingrese numero 2"
+5
+1
+7
+Numero2
+4
+1
+18
+"Ingrese numero 3"
+5
+1
+7
+Numero3
+7
+0
+1
+35
+Numero1>Numero2 AND Numero1>Numero3
+7
+0
+1
+35
+Numero2>Numero1 AND Numero2>Numero3
+4
+1
+22
+"El numero 3 es mayor"
+13
+4
+1
+22
+"El numero 2 es mayor"
+13
+13
+4
+1
+22
+"El numero 1 es mayor"
+13
+1
