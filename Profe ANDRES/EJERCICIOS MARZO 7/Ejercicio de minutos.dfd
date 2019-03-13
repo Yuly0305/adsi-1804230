@@ -1,0 +1,44 @@
+ Dfd (c)
+1
+1
+1
+0
+0
+6
+1
+5
+costo
+1
+0
+4
+1
+45
+"Ingrese el tiempo de la llamada en minutos "
+5
+1
+7
+Minutos
+7
+0
+1
+10
+Minutos<=5
+6
+1
+5
+valor
+21
+200+((Minutos-5)*150)
+13
+6
+1
+5
+valor
+3
+200
+13
+4
+1
+36
+'El valor de la llamada es:  ',valor
+1
