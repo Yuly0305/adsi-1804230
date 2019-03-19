@@ -1,18 +1,18 @@
 doctype
 html(lang="es")
-head
-	meta(charset="UTF-8")
-	title Casos
-body
-	h1 Casos 
-	-var amigos = 2
-	case amigos
-		when 0
-			h4 tu no tienes amigos
-		when 1
-		when 2
-		when 3
-		when 4
-			h4 tienes pocos amigos
-		default
-			h4 tu tienes #{amigos} Amigos
+	head
+		meta(charset="UTF-8")
+		title Casos
+	body
+		h1 Casos 
+		-var amigos = 2
+		case amigos
+			when 0
+				h4 tu no tienes amigos
+			when 1
+			when 2
+			when 3
+			when 4
+				h4 tienes pocos amigos
+			default
+				h4 tu tienes #{amigos} Amigos
