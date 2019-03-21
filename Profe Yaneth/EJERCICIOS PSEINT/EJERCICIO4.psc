@@ -7,12 +7,12 @@ Proceso EJERCICIO4
 	
 	Si Sueldo <= SMLV Entonces
 		Descuento<-SMLV*0.08
-		SueldoFinal<-SueldoFinal-0.08
+		SueldoFinal<-Sueldo-descuento
 		Escribir "El descuento del sueldo con el 8% es ",Descuento
 		Escribir "El sueldo neto es ",SueldoFinal
 	Fin si
 	Si Sueldo > SMLV y Sueldo < SMLV*3 Entonces
-		Sueldo<-Sueldo*0.13
+		Descuento<-SMLV*0.13
 		SueldoFinal<-SueldoFinal+SMLV
 		Escribir "El descuento del sueldo con el 13% es ",Sueldo
 		Escribir "El sueldo neto es ",SueldoFinal
