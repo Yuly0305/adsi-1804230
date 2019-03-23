@@ -1,15 +1,23 @@
 Proceso EJERCICIO5
 	
-	Monto<-0
+	Monto<-300000
+	Descuento<-0
+	MontoIngresado<-0
 	
 	Escribir "Ingrese el monto "
-	Leer Monto
+	Leer MontoIngresado
 	
-	Si Monto > 300000 Entonces
-		Monto<-Monto*0.1
-		Escribir "El valor del descuento con el 10% es de " ,monto
+	Si MontoIngresado=Monto Entonces 
+		Escribir "El monto no lleva descuento"
 	Sino
-		Monto<-Monto*0.02
-		Escribir "El valor del descuento con el 2% es de " ,monto
+		Si MontoIngresado > Monto Entonces
+			Descuento<-MontoIngresado*0.1
+			NuevoMonto<-MontoIngresado-Descuento
+			Escribir "El valor del descuento con el 10% es de " ,NuevoMonto
+		Sino
+			Descuento<-MontoIngresado*0.02
+			NuevoMonto<-MontoIngresado-Descuento
+			Escribir "El valor del descuento con el 2% es de " ,NuevoMonto
+		Fin Si
 	Fin Si
 FinProceso

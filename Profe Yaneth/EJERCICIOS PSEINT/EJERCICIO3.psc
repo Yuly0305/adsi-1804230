@@ -1,34 +1,35 @@
-Proceso salarioEquipoTrabajo
-	cantidadEmpleados<-3
-	valorHoraE<-43000
-	valorHoraExtraE<-0
-	cantidadHorasL<-40
-	cantidadHorasE<-0
-	cantHorasExtras<-0
-	salarioIndividual<-0
-	salarioTotalEmpleados<-0
+Proceso EJERCICIO2
+	//Declaracion de variable
+	ValorHora<-42000
+	HorasTrabajadas<-0
+	HorasExtras<-0
+	ValorSalario<-0
+	ValorHoraExtra<-0
+	CantidadEmpleados<-3
+	SumaSalarios<-0
 	
-	Para iteraciones<-1 Hasta cantidadEmpleados Con Paso 1 Hacer
-		Escribir 	"Ingrese cantidad de horas laboradas"
-		Leer cantidadHorasE
+	Escribir "Ingrese cantidad de empleados"
+	Leer CantidadEmpleados
+	
+	Para i<-1 Hasta CantidadEmpleados Con Paso 1 Hacer
 		
-		Si (cantidadHorasE > cantidadHorasL) Entonces
-			cantHorasExtras <-cantidadHorasE-cantidadHorasL
-			Escribir "Usted laboro ", cantHorasExtras, " horas extras"
-			
-			valorHoraExtraE<-((cantHorasExtras * valorHoraE)*0.5)+(cantHorasExtras * valorHoraE)
-			Escribir "El pago excedente por horas extras del empleado numero ", iteraciones, " Es de " valorHoraExtraE
-			salarioIndividual<-valorHoraExtraE+(cantidadHorasL*valorHoraE)
-			Escribir "El salario total corresponde a ", salarioIndividual
-			salarioTotalEmpleados<-salarioTotalEmpleados + salarioIndividual
-			Escribir "El salario total por todos los empleados es de " salarioTotalEmpleados
-		Sino
-			Escribir "No trabajo horas extra"
-			salarioIndividual<-cantidadHorasL*valorHoraE
-			Escribir "El salario total corresponde a ", salarioIndividual
-			salarioTotalEmpleados<-salarioTotalEmpleados + salarioIndividual
-			Escribir "El salario total por todos los empleados es de " salarioTotalEmpleados
-		Fin Si
+		Escribir "Ingrese horas trabajadas del empleado ",i
+		Leer HorasTrabajadas
+	
+	Si HorasTrabajadas > 40 Entonces
 		
+		HorasExtras <- HorasTrabajadas - 40
+		ValorHorasExtras <- (HorasExtras*ValorHora)*0.5
+		ValorSalario <-(HorasTrabajadas*ValorHora)+ValorHorasExtras
+		Escribir "Su salario es ", ValorSalario
+		
+	Sino
+		ValorSalario <- HorasTrabajadas* ValorHora
+		Escribir "Su salario es ", ValorSalario
+		
+	Fin Si
+	
+	SumaSalarios<-SumaSalarios+ValorSalario	
 	Fin Para
+	Escribir "La suma de los salarios de los empleados es de ",SumaSalarios
 FinProceso
