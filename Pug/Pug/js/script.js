@@ -1,2 +1,2 @@
-var nombre = "jeremias Springfield";
-console.Log("Bienvenidos")
+var nombre = "Jeremias Springfield";
+console.log("Binvenido: "+nombre);
