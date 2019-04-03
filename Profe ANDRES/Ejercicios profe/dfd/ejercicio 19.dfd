@@ -1,0 +1,36 @@
+ Dfd (c)
+1
+1
+1
+0
+0
+6
+1
+3
+num
+1
+1
+4
+1
+51
+"Si ingresa el numero cero la operacion se cancela"
+9
+1
+6
+num>=1
+5
+1
+3
+num
+6
+1
+8
+cuadrado
+7
+num*num
+4
+1
+37
+"El numero al cuadrado es: ",cuadrado
+11
+1

@@ -1,0 +1,11 @@
+docytpe
+html(lang="es")
+	head
+		meta(charset="UTF-8")
+		title Reto Tablas
+	body
+		h1 Reto Tablas
+		table
+			each val,index in ['#e6e6ff','#ccccff','#b3b3ff','#9999ff','#8080ff','#6666ff','#4d4dff','#3333ff','#1a1aff']
+				tr
+					td(class="a"+(index+1) , style="background-color:"+val , width="300px", height="30px")
