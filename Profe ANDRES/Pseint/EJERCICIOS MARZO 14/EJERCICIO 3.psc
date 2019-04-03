@@ -1,19 +1,19 @@
 Proceso EJERCICIO3
-	positivos<-0
-	negativos<-0
-	ceros<-0
+	Positivos<-0
+	Negativos<-0
+	Ceros<-0
 	Escribir "Digite numeros "
-	Para i<-1 Hasta 20 Hacer
-		Leer num
-		Si num>=1 Entonces
-			positivos <-positivos+1
+	Para i<-1 Hasta 5 Hacer
+		Leer Num
+		Si Num>=1 Entonces
+			Positivos <-Positivos+1
 		Sino
-			si num<0 Entonces
-				negativos<-negativos+1
+			si Num<0 Entonces
+				Negativos<-Negativos+1
 			sino
-				ceros<-ceros+1
+				Ceros<-Ceros+1
 			FinSi
 		Fin Si
 	Fin Para
-	Escribir " Los numeros positivos son ",positivos, " Los numeros negativos son ", negativos, " Los ceros son ", ceros
+	Escribir " Los numeros positivos son ",Positivos, " Los numeros negativos son ", Negativos, " Los ceros son ", Ceros
 FinProceso
