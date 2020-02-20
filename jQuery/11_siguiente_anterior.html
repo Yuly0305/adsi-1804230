@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>siguiente/anterior (Manipulacion DOM)</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<style>
+		main{
+			width: 1024px;
+		}
+		section.sliders{
+			height: 361px;
+			margin: 0px auto;
+			position: relative;
+			overflow: hidden;
+			width: 1024px;
+		}
+		/* section.sliders figure */
+		section.sliders figure{
+			position: relative;
+			margin: 0px;
+		}
+		section.sliders figure:hover figcaption{
+			bottom: 0px;
+		}
+		/* section.sliders figure figcaption */
+		section.sliders figure figcaption{
+			background-color: rgba(0,0,0,.8);
+			color: rgba(255,255,255,.8);
+			height: 100px;	
+			padding: 10px;
+			position: absolute;
+			bottom: -120px;
+			transition: all 0.5s ease-in;
+			width: 1004px;
+		}
+		/* section.sliders figure figcaption h4 */
+		section.sliders figure figcaption h4{
+			border-bottom:3px double rgba(255,255,255,.4);
+			font-style: 1.5em;
+			text-align: left;
+			margin: 0px;
+			text-transform: uppercase;
+		}
+		section.sliders figure figcaption p{
+			text-align: justify;
+		}
+		section.sliders div.controls{
+			width: 1024px;
+			position: absolute;
+			top: 60px;
+			z-index: 99px;
+		}
+		section.sliders div.controls button{
+			transition: all 0.5s ease-in;
+			opacity: 0.8;
+			position: absolute;
+			border: none;
+			height: 160px;
+			width: 85px;
+
+		}
+		section.sliders div.controls button:hover{
+			opacity: 1;
+			cursor: pointer;
+			transform: scale(1.1);
+		}
+		section.sliders div.controls button.btn-next{
+			background: url(imgs/Sliders/btn-next.png) no-repeat center;
+			right: 	-1px;
+		}
+		section.sliders div.controls button.btn-prev{
+			background: url(imgs/Sliders/btn-prev.png) no-repeat center;
+
+		}
+		section.sliders div.dots{
+			position: absolute;
+			top: 10px; left: 50%;
+			transform: translateX(-50%);
+			width: 150px;
+			z-index: 99px;
+
+		}
+		section.sliders div.dots button{	
+			border-radius: 20px;
+			background: rgba(255,255,255,.6);
+			border: 1px solid black;
+			transition: all 0.5s ease-out;
+			height: 24px;
+			width: 24px;	
+		}
+		section.sliders div.dots button:hover{
+			cursor: pointer;
+			transform: scale(1.1);
+		}
+		section.sliders div.dots button.active{
+			background: rgba(0,0,0,.8);
+			color: #fff;
+			border:1px solid #fff;
+		}
+		/* section.slider button.btn-play */
+		section.sliders button.btn-play{
+			border-radius: 20px;
+			border: none;
+			background: rgba(255,255,255,.6);
+			font-weight: bold;
+			height: 24px;
+			top: 10px; left:10px;
+			transition: all 0.2s ease-out;
+			position: absolute;
+			width: 120px;
+
+		}
+		section.sliders button.btn-play:hover{
+			cursor: pointer;
+			transform: scale(1.1);
+		}
+
+	</style>
+</head>
+<body>
+	<main>
+		<h1>siguiente/anterior (Manipulacion DOM)</h1>
+		<section class="sliders">
+			<figure class="slider1 active">
+				<img src="imgs/Sliders/slider1.png">
+				<figcaption>
+					<h4>SONIC</h4>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis deserunt soluta nulla sed quis, libero, fugit in facilis, aliquam repudiandae ipsa, nisi maxime nesciunt ex sapiente commodi fuga! Vitae, voluptatibus?
+					</p>
+				</figcaption>
+			</figure>
+			<figure class="slider2">
+				<img src="imgs/Sliders/slider2.png">
+				<figcaption>
+					<h4>Korra</h4>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis deserunt soluta nulla sed quis, libero, fugit in facilis, aliquam repudiandae ipsa, nisi maxime nesciunt ex sapiente commodi fuga! Vitae, voluptatibus?
+					</p>
+				</figcaption>
+			</figure>
+			<figure class="slider3">
+				<img src="imgs/Sliders/slider3.png">
+				<figcaption>
+					<h4>Toph</h4>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis deserunt soluta nulla sed quis, libero, fugit in facilis, aliquam repudiandae ipsa, nisi maxime nesciunt ex sapiente commodi fuga! Vitae, voluptatibus?
+					</p>
+				</figcaption>
+			</figure>
+			<figure class="slider4">
+				<img src="imgs/Sliders/slider4.png">
+				<figcaption>
+					<h4>ZOKA</h4>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis deserunt soluta nulla sed quis, libero, fugit in facilis, aliquam repudiandae ipsa, nisi maxime nesciunt ex sapiente commodi fuga! Vitae, voluptatibus?
+					</p>
+				</figcaption>
+			</figure>
+			<figure class="slider5">
+				<img src="imgs/Sliders/slider5.png">
+				<figcaption>
+					<h4>APPA</h4>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis deserunt soluta nulla sed quis, libero, fugit in facilis, aliquam repudiandae ipsa, nisi maxime nesciunt ex sapiente commodi fuga! Vitae, voluptatibus?
+					</p>
+				</figcaption>
+			</figure>
+			<div class="controls">
+				<button class="btn-prev"></button>
+				<button class="btn-next"></button>
+			</div>
+			<div class="dots">
+				<button class="dot1 active">1</button>
+				<button class="dot2">2</button>
+				<button class="dot3">3</button>
+				<button class="dot4">4</button>
+				<button class="dot5">5</button>
+			</div>
+			<button class="btn-play">&rtrif; Autoplay</button>
+		</section>
+	</main>
+	<script src="js/jquery-3.4.1.js">
+	</script>
+	<script>
+		$(document).ready(function() {
+			//Variables
+			$numSliders      = $('figure').length; //Numero de sliders
+			$activeSliders   = $('figure.active'); //Slider activo
+			$numActiveSlider = 1; //Numero slider activo
+
+			//Logica
+
+			$('figure').not('.active').hide(); //Ocultar todos los slider menos el activo
+
+			//Eventos
+			$('.btn-next').click(function(event) {
+				if ($numActiveSlider < $numSliders) {
+					$numActiveSlider++;
+					$activeSliders.hide().removeClass('active');
+					$activeSliders.next().addClass('active').fadeIn(1000);				
+				}else{ 
+					$numActiveSlider = 1;
+					$activeSliders.hide().removeClass('active');
+					$('figure').first().addClass('active').fadeIn(1000);
+
+				}
+				$activeSliders = $('figure.active');
+				activeNumberSlider();
+			});
+
+			/*---------------------------*/
+			$('.btn-prev').click(function(event) {
+				if ($numActiveSlider > 1) {
+					$numActiveSlider--;
+					$activeSliders.hide().removeClass('active');
+					$activeSliders.prev().addClass('active').fadeIn(1000);				
+				}else{ 
+					$numActiveSlider = 5;
+					$activeSliders.hide().removeClass('active');
+					$('figure').last().addClass('active').fadeIn(1000);
+				}
+				$activeSliders = $('figure.active');
+				activeNumberSlider();
+			});
+
+	
+			/*---------------*/
+			$('.btn-play').click(function(event) {
+				$(this).toggleClass('autoplay');
+				if($(this).hasClass('autoplay')) {
+					$(this).html('&FilledSmallSquare; Stop');
+					$intsliders = setInterval(function(){
+					if ($numActiveSlider < $numSliders) {
+						$numActiveSlider++;
+						$activeSliders.hide().removeClass('active');
+						$activeSliders.next().addClass('active').fadeIn(1000);				
+					}else{ 
+						$numActiveSlider = 1;
+						$activeSliders.hide().removeClass('active');
+						$('figure').first().addClass('active').fadeIn(1000);
+					}
+					$activeSliders = $('figure.active');
+					activeNumberSlider();
+				},2000);
+				} else {
+					$(this).html('&rtrif; AutoPlay');
+					clearInterval($intsliders);
+				}
+
+			});
+
+			//Funciones
+				/*------*/
+			$('div.dots button').click(function(event) {
+				$('div.dots button').removeClass('active');
+				$(this).addClass('active');
+				$numActiveSlider= parseInt($(this).text());
+				$activeSliders.hide().removeClass('active');
+				$('figure').eq($numActiveSlider-1).addClass('active').fadeIn(1000);
+				$activeSliders = $('figure.active');
+			});
+			/*----------------------*/
+			function activeNumberSlider(){
+				$('div.dots button').removeClass('active');
+				$('div.dots button').each(function(index, el) {
+					if ($numActiveSlider == index+1) {
+						$(el).addClass('active');
+
+
+					}
+				});
+			}
+		});
+	</script>
+</body>
+</html>
+
+

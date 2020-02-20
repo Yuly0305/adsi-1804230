@@ -1,0 +1,80 @@
+body {
+  background-color: #140935;
+  font: 16px Tahoma;
+}
+body h1 {
+  font-size: 3.6em;
+  background: linear-gradient(to top, #2CE713 10%, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin: 50px auto;
+  width: 580px;
+}
+body a:link.btn,
+body a:visited.btn {
+  border: 2px solid #2CE713;
+  border-radius: 4px;
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  color: #10F115;
+  width: 120px;
+  margin: 80px auto;
+}
+body a:link.btn:hover,
+body a:visited.btn:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+section.modal {
+  background-color: rgba(255, 255, 255, 0.2);
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  transition: all 0.5s ease;
+  transform: scale(0.2) translateY(-200px);
+  z-index: 9999;
+}
+section.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+section.modal > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  padding: 20px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateY(-30%);
+  transform: translateX(-50%);
+  width: 400px;
+}
+section.modal > div h2 {
+  color: green;
+  position: relative;
+}
+section.modal > div h2:after {
+  content: "Si puede votar";
+}
+section.modal > div a:link,
+section.modal > div a:visited {
+  font-size: 1.5em;
+  display: block;
+  text-decoration: none;
+  color: crimson;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+}

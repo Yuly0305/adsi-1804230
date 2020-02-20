@@ -1,0 +1,21 @@
+:root {
+	font: 16px Arial;
+}
+body {
+	font-size: 1rem;
+	background-color: #B29DAE;
+	color: #FD1239;
+}
+main {
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: 1px 1px 8px 0px #5C0119;
+	margin: 40px auto;
+	padding: 20px;
+	width: 600px;
+
+}
+h1 {
+	text-align: center;
+	border-bottom: 1px solid #1D7E64;
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RETO PAG</title>
+	<style>
+		body{
+			background-color:#fff;
+		}
+		
+		h1{
+			padding: 5px;
+			background: #1E6A12;
+			font-size : 5em;
+			font-style: oblique;
+			color:rgba(135,247,90);
+			box-shadow: 0px 0px 50px #189A0B;
+			margin-top: 10px;
+		
+		}
+		section.menu{
+			width: 30px;
+			font-size: 30px;
+			padding-top: 10px;
+			margin-left: 510px;
+			display: inline;
+
+		}
+		section.menu a{
+			color: #fff;
+			text-decoration: none;
+			padding: 3px;
+			border: 5px double #AFF146;
+		}
+		section.menu a:hover{
+			background-color: #E0E720;
+			border-left: 5px solid #000000;			
+		}
+		section.inicio{
+			border-color:#1E6A12;
+			border-style: double;
+			box-shadow: 8px 5px 2px #CCEE12;	
+			background-color:rgb(191, 255, 0,0.3);
+			position: absolute;
+			height: 190px;
+			width: 700px;
+			left: 335px; 
+			top: 170px; 	
+		}
+		p{
+			color: #215613;
+			font-style: oblique;
+			font-size: 20px;
+			text-align: center;
+			margin: 20px;
+		}
+		section#img{
+			background: url(Imgs/spriteweb.png) no-repeat;
+			height: 205px;
+			margin: 8px;
+			left: 335px; 
+			top: 170px; 
+			width: 280px;
+		}
+		section#img.s1{background-position: 8px -10px;}
+		section#img.s2{background-position:-525px 0px;} 
+		section#img.s3{background-position:-500px -420px;} 
+
+		section#img2{
+			background: url(Imgs/spriteweb.png) no-repeat;
+			position: absolute;
+			left: 1080px;
+			top: 160px;
+			height: 200px;
+			margin: 10px;
+			width: 280px;
+		}
+		section#img2.t1{background-position: 8px -10px;}
+		section#img2.t2{background-position: -540px -10px;} 
+		section#img2.t3{background-position:-500px -420px;} 
+
+		section.cajap{
+			border: 5px double #1E6A12;
+			box-shadow: 0px 0px 17px #3A910B inset,
+			 			0px 0px 14px #ffff00 inset,
+			 			0px 0px 15px #ffff00 ;	
+			margin: 50px auto;
+			height: 250px;
+			width: 1325px;
+		}
+		section.productos div.caja1{
+			background: url(Imgs/spriteweb.png);
+			background-position: -234px 0px;
+			border: 0px ;
+			margin: 0px;
+			position: absolute;
+			left: 30px; 
+			top: 440px; 
+			height: 220px;
+			width: 235px;
+		}
+		section.productos div.caja2{
+			background: url(Imgs/spriteweb.png);
+			background-position: -23px -175px;
+			position: absolute;
+			left: 250px; 
+			top: 440px; 	
+			height: 220px;
+			width: 235px;
+		}
+		section.productos div.caja3{
+			background: url(Imgs/spriteweb.png);
+			background-position: 300px -208px;
+			position: absolute;
+			left: 540px; 
+			top: 440px; 	
+			height: 220px;
+			width: 235px;
+		}
+		section.productos div.caja4{
+			background: url(Imgs/spriteweb.png);
+			background-position: -23px -175px;
+			position: absolute;
+			left: 850px; 
+			top: 440px; 	
+			height: 220px;
+			width: 235px;
+		}
+		section.productos div.caja5{
+			background: url(Imgs/spriteweb.png);
+			background-position: -234px 0px;
+			position: absolute;
+			left: 1080px; 
+			top: 440px; 
+			height: 220px;
+			width: 235px;
+		}
+		article {
+			box-shadow: 0px 0px 17px #3A910B inset,
+			 			0px 0px 14px #ffff00 inset,
+			 			0px 0px 15px #ffff00 ;	
+			border: 5px double #1E6A12;
+			margin: 2px;
+			display: inline-block;
+			width: 1317px;
+			background: rgb(191, 255, 0,0.3) ;
+		}
+		section div.foto1 {
+			background: url(Imgs/spriteweb.png);
+			background-position: -10px 800px;
+			position: absolute;
+			left: 30px; 
+			top: 960px; 	
+			height: 200px;
+			width: 235px;
+		}
+		section div.foto2 {
+			background: url(Imgs/spriteweb.png);
+			background-position: -235px 820px;
+			position: absolute;
+			left: 10px; 
+			top: 1180px; 	
+			height: 210px;
+			width: 235px;
+		}
+		section.textofin{
+			box-shadow: 0px 0px 17px #3A910B ,
+			 			0px 0px 14px #ffff00 ,
+			 			0px 0px 15px #ffff00 ;	
+			background-position: -235px 820px;
+			border: 5px double #1E6A12;
+			font-style: oblique;
+			position: absolute;
+			left: 300px; 
+			top: 960px; 	
+			height: 400px;
+			width: 1000px;
+			background: #000;
+			color: #E3EB0A;
+		}
+		section.textofin h2{
+			box-shadow: 0px 0px 17px #ffff00 inset;
+			text-align: center;
+			padding: 15px;
+		}
+
+		section.formulario {
+			color:#ffff00;
+			position: absolute;
+			left: 350px; 
+			top: 1040px; 	
+		}
+
+	 </style>
+</head>
+<body>
+	<h1>Sprite
+      <section class="menu">
+	    <a href="">Inicio</a>
+	    <a href="">Productos</a>
+	    <a href="">Quienes somos</a>
+	    <a href="">Contacto</a>
+      </section>
+    </h1>
+	 <section class="inicio">
+	    <p>Lorem ipsum dolor sit amet, consectetur  adipisicing elit.  aut at cum ab illo, assumenda, repudiandae reiciendis dicta quasi quisquam consequuntur ipsa! Illo, ut, assumenda. Sequi tenetur maiores voluptatum facilis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius aut at cum ab illo, assumenda, repudiandae reiciendis dicta quasi quisquam consequuntur ipsa! Illo, ut, assumenda. Sequi tenetur maiores voluptatum facilis</p>	
+	 </section>
+  	  <section class="productos">
+		<div class="caja1"></div>
+		<div class="caja2"></div>
+		<div class="caja3"></div>
+		<div class="caja4"></div>
+		<div class="caja5"></div>
+	</section>
+
+	<section id="img" class="s1"></section>
+	<section id="img2" class="t3"></section>
+	<section class="cajap"></section>
+	<article>
+			<p class="p1">Sprite (pronunciado [Sprait]) es una famosa marca reconocida mundialmente de bebida gaseosa con sabor a limón y sin cafeína producida en 1961 por la empresa "The Coca-Cola Company" (En México fue en 1959 bajo el nombre Clara Sanchez Fanta Limón Claro antes de ser renombrada).Fue la respuesta de Coca-Cola frente a la popularidad de 7Up, que empezó como "Lithiated Lemon" en 1929. En la actualidad Sprite se vende en más de 190 países.Las botellas transparentes de Sprite son verdes (sin color para su versión Zero y algunas botellas retornables, con excepción de las de vidrio) mientras que las latas presentan colores verde, azul, amarillo y plateado.En México del año 2018 el nombre cambió a Spride por conmemoración e inclusión por el Día del Orgullo LGBT donde fue regala en la march</p>
+		</article>
+
+		<script>
+		var img = document.getElementById("img");
+		var actf = 1;
+		var numf = 3;
+		setInterval(function(){
+			img.className= '';
+			img.classList.add('s'+actf);
+			if(actf==numf){
+				actf=1;
+			} else	{
+				actf++;
+			}
+		}, 900);
+	</script>
+	<script>
+		var img2 = document.getElementById("img2");
+		var actf2 = 1;
+		var numf2 = 3;
+		setInterval(function(){
+			img2.className= '';
+			img2.classList.add('t'+actf2);
+			if(actf2==numf2){	
+				actf2=1;
+			} else	{
+				actf2++;
+			}
+		}, 900);
+	</script>
+	<section>
+		<div class="foto1"></div>
+		<div class="foto2"></div>
+	</section>
+	<section class="textofin">
+	<h2>CONTACTANOS</h2>
+	</section>
+	<section class="formulario">
+		<legend><h4>Datos personales </h4></legend>
+		<label for="Nombre">Nombre Completo</label>
+		<input type="text" id="name">
+		<br>
+		<label for="emali">Correo Electronico</label>
+		<input type="email" placeholder="Ejemplo: ycre....@gmail.com" required="">
+		<br>
+		<label for="Descripción">Descripción:</label>
+		<br>
+		<textarea id="Descripcion" cols="50" rows="10"></textarea>
+		<br>
+		<button type="submit">Validar</button>
+	</section>
+</body>
+</html>

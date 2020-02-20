@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Manipulacion CSS</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<style>
+		:root{
+			--color1:#EBD2F3;
+			--color2:#900A92;
+			--color3:#B8F4EE;
+		}
+		section.tictactoe{
+			height: 460px;
+			margin: 40px auto;
+			width: 470px;
+		}
+		section.tictactoe div.row{
+			border: 3px solid var(--color2);
+			display: inline-block;
+			vertical-align: top;
+			font-size: 6em;
+			height: 150px;
+			margin: -5px 0px 0px -5px;
+			transition: all 0.2s ease-in;
+			width: 150px;
+		}
+		section.tictactoe div.row:nth-child(1){
+			border-color: var(--color1) var(--color2) var(--color2) var(--color1) ;	
+		}
+		section.tictactoe div.row:nth-child(2){
+			border-color: var(--color1) var(--color2) var(--color2) var(--color2) ;	
+		}
+		section.tictactoe div.row:nth-child(3){
+			border-color: var(--color1) var(--color1) var(--color2) var(--color2) ;	
+		}
+		section.tictactoe div.row:nth-child(4){
+			border-color: var(--color2) var(--color2) var(--color2) var(--color1) ;	
+		}
+
+		section.tictactoe div.row:nth-child(6){
+			border-color: var(--color2) var(--color1) var(--color2) var(--color2) ;	
+		}
+		section.tictactoe div.row:nth-child(7){
+			border-color: var(--color2) var(--color2) var(--color1) var(--color1) ;	
+		}
+		section.tictactoe div.row:nth-child(8){
+			border-color: var(--color2) var(--color2) var(--color1) var(--color2) ;	
+		}
+		section.tictactoe div.row:nth-child(9){
+			border-color: var(--color2) var(--color1) var(--color1) var(--color2) ;	
+		}
+		section.tictactoe div.row:hover{
+			cursor: pointer;
+			background-color: var(--color3);
+		}
+
+		section.tictactoe div.row.cross{
+			background: url(imgs/triqui/cross.png) no-repeat center;
+		}
+		section.tictactoe div.row.circle{
+			background: url(imgs/triqui/circle.png) no-repeat center;
+		}
+		/* ------------------ */
+		section.tictactoe.turn-cross div.row{
+			cursor: url(imgs/triqui/cross-cur.png), pointer;
+		}
+		section.tictactoe.turn-circle div.row{
+			cursor: url(imgs/triqui/circle-cur.png), pointer;
+		}
+
+		/* -------------------------------- */
+		button.btn-reset{
+			background-color: var(--color2);
+			border-radius: 5px;
+			border: none;
+			font-size: 1.2em;
+			color: var(--color1);
+			display: block;
+			margin: 10px auto;
+			padding: 10px;
+			opacity: .8;
+			transition: all 0.5s ease-in;
+			width: 200px;
+		}
+		button.btn-reset:hover{
+			opacity: 1;
+			cursor: pointer;
+		}
+		/* ----------------------------------- */
+		section.tictactoe div.row.markwin {
+			background-color: #71FA4C;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Manipulacion CSS</h1>
+		<h4> </h4>
+		<section class="tictactoe turn-cross">
+			<div class="row"></div>
+			<div class="row"></div>
+			<div class="row"></div>
+			<div class="row"></div>
+			<div class="row"></div>
+			<div class="row"></div>
+			<div class="row"></div>
+			<div class="row"></div>
+			<div class="row"></div>	
+		</section>
+		<button class="btn-reset">REINICIAR</button>
+	</main>
+	<script src="js/jquery-3.4.1.js"></script>
+	<script>
+		$(document).ready(function() {
+			//Evento
+			$('body').on('click', 'div.row:not(.mark)', function(event) {
+				event.preventDefault();
+				/* Act on the event */
+				if ($('section.tictactoe').hasClass('turn-cross')) {
+					$(this).addClass('cross');
+					$('section.tictactoe').removeClass('turn-cross')
+					                      .addClass('turn-circle');
+
+				}else{
+					$(this).addClass('circle');
+					$('section.tictactoe').removeClass('turn-circle')
+					                      .addClass('turn-cross');
+				}
+				$(this).addClass('mark');
+				checkWinner();
+			});
+			$('.btn-reset').click(function(event) {
+				$('div.row').removeClass('mark')
+				            .removeClass('markwin')
+				            .removeClass('cross')
+				            .removeClass('circle');
+				$('section.tictactoe').removeClass('turn-circle')
+				                      .addClass('turn-cross');
+				$('h4').remove();
+			});
+			//Funciones
+			function checkWinner(){
+					if(($('div.row').eq(0).hasClass('cross')&&
+					   $('div.row').eq(1).hasClass('cross')&&
+					   $('div.row').eq(2).hasClass('cross')) ||  ($('div.row').eq(0).hasClass('circle')&&
+					   $('div.row').eq(1).hasClass('circle')&&
+					   $('div.row').eq(2).hasClass('circle'))){
+					   		$('div.row').eq(0).addClass('markwin');
+					   		$('div.row').eq(1).addClass('markwin');
+					   		$('div.row').eq(2).addClass('markwin');
+					   		if ($("div.row").eq(0).hasClass('circle')) {
+					   								   		$('h1').after('<h4>GANADRON LOS: CIRCULOS </h4>');
+
+					   		}
+					   		if ($("div.row").hasClass('cross')) {
+					   								   								   		$('h1').after('<h4>GANADRON LAS: CRUCES </h4>');
+
+					   		$('div.row').addClass('mark');
+					}
+					if(($('div.row').eq(3).hasClass('cross')&&
+					    $('div.row').eq(4).hasClass('cross')&&
+					    $('div.row').eq(5).hasClass('cross')) ||($('div.row').eq(3).hasClass('circle')&&
+					    $('div.row').eq(4).hasClass('circle')&&
+					    $('div.row').eq(5).hasClass('circle'))){
+					   		$('div.row').eq(3).addClass('markwin');
+					   		$('div.row').eq(4).addClass('markwin');
+					   		$('div.row').eq(5).addClass('markwin');
+					   		if ($("div.row").eq(3).hasClass('circle')) {
+					   								   		$('h1').after('<h4>GANADRON LOS: CIRCULOS </h4>');
+
+					   		}
+					   		if ($("div.row").hasClass('cross')) {
+					   								   								   		$('h1').after('<h4>GANADRON LAS: CRUCES </h4>');
+
+					   		}
+
+					   		
+					   		$('div.row').addClass('mark');
+					}	
+					if(($('div.row').eq(6).hasClass('cross')&&
+					    $('div.row').eq(7).hasClass('cross')&&
+					    $('div.row').eq(8).hasClass('cross')) ||($('div.row').eq(6).hasClass('circle')&&
+					    $('div.row').eq(7).hasClass('circle')&&
+					    $('div.row').eq(8).hasClass('circle'))){
+					   		$('div.row').eq(6).addClass('markwin');
+					   		$('div.row').eq(7).addClass('markwin');
+					   		$('div.row').eq(8).addClass('markwin');
+					   		$('h1').after('<h4>GANADRON LAS: X </h4>');
+					   		$('div.row').addClass('mark');
+					}	
+					if(($('div.row').eq(0).hasClass('cross')&&
+					    $('div.row').eq(3).hasClass('cross')&&
+					    $('div.row').eq(6).hasClass('cross')) ||($('div.row').eq(0).hasClass('circle')&&
+					    $('div.row').eq(3).hasClass('circle')&&
+					    $('div.row').eq(6).hasClass('circle'))){
+					   		$('div.row').eq(0).addClass('markwin');
+					   		$('div.row').eq(3).addClass('markwin');
+					   		$('div.row').eq(6).addClass('markwin');
+					   		$('h1').after('<h4>GANADRON LAS: X </h4>');
+					   		$('div.row').addClass('mark');
+					}	
+					if(($('div.row').eq(1).hasClass('cross')&&
+					    $('div.row').eq(4).hasClass('cross')&&
+					    $('div.row').eq(7).hasClass('cross')) ||($('div.row').eq(1).hasClass('circle')&&
+					    $('div.row').eq(4).hasClass('circle')&&
+					    $('div.row').eq(7).hasClass('circle'))){
+					   		$('div.row').eq(1).addClass('markwin');
+					   		$('div.row').eq(4).addClass('markwin');
+					   		$('div.row').eq(7).addClass('markwin');
+					   		$('h1').after('<h4>GANADRON LAS: X </h4>');
+					   		$('div.row').addClass('mark');
+					}	
+					if(($('div.row').eq(2).hasClass('cross')&&
+					    $('div.row').eq(5).hasClass('cross')&&
+					    $('div.row').eq(8).hasClass('cross')) ||($('div.row').eq(2).hasClass('circle')&&
+					    $('div.row').eq(5).hasClass('circle')&&
+					    $('div.row').eq(8).hasClass('circle'))){
+					   		$('div.row').eq(2).addClass('markwin');
+					   		$('div.row').eq(5).addClass('markwin');
+					   		$('div.row').eq(8).addClass('markwin');
+					   		$('h1').after('<h4>GANADRON LAS: X </h4>');
+					   		$('div.row').addClass('mark');
+					}	
+					if(($('div.row').eq(0).hasClass('cross')&&
+					    $('div.row').eq(4).hasClass('cross')&&
+					    $('div.row').eq(8).hasClass('cross')) ||($('div.row').eq(0).hasClass('circle')&&
+					    $('div.row').eq(4).hasClass('circle')&&
+					    $('div.row').eq(8).hasClass('circle'))){
+					   		$('div.row').eq(0).addClass('markwin');
+					   		$('div.row').eq(4).addClass('markwin');
+					   		$('div.row').eq(8).addClass('markwin');
+					   		$('h1').after('<h4>GANADRON LAS: X </h4>');
+					   		$('div.row').addClass('mark');
+					}
+					if(($('div.row').eq(2).hasClass('cross')&&
+					    $('div.row').eq(4).hasClass('cross')&&
+					    $('div.row').eq(6).hasClass('cross')) ||($('div.row').eq(2).hasClass('circle')&&
+					    $('div.row').eq(4).hasClass('circle')&&
+					    $('div.row').eq(6).hasClass('circle'))){
+					   		$('div.row').eq(2).addClass('markwin');
+					   		$('div.row').eq(4).addClass('markwin');
+					   		$('div.row').eq(6).addClass('markwin');
+					   		$('h1').after('<h4>GANADRON LAS: X </h4>');
+					   		$('div.row').addClass('mark');
+					}	
+	
+
+
+
+
+
+																
+				
+			}
+		});	
+	</script>
+</body>
+</html>

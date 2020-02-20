@@ -1,0 +1,50 @@
+@import "filtros";
+
+body {
+	font: 16px Tahoma;
+}
+section {
+	margin: 20px auto;
+	width: (224px * 3.1);
+	h1 {
+		text-align: center;
+	}
+	figure {
+		background: url(../imgs/iro.jpg) no-repeat center;
+		background-size: contain;
+		border: 2px solid green;
+		border-radius: 100px;
+		display: inline-block;
+		height: 200px;
+		margin: 10px;
+		padding: 0px;
+		width: 200px;
+	}
+}
+section {
+	figure {
+		cursor: pointer;
+		transition: all 0.5s ease-in-out;
+		&:hover {
+			transform: scale(1.1);
+		}
+		&:hover.filter1 {
+			filter: grayscale(1);
+		}
+		&:hover.filter2 {
+			filter: blur(2px);
+		}
+		&:hover.filter3 {
+			filter: opacity(.5);
+		}
+		&:hover.filter4 {
+			filter: sepia(.9);
+		}
+		&:hover.filter5 {
+			filter: invert(2);
+		}
+		&:hover.filter6 {
+		filter: brightness(4);
+		}
+	}
+}

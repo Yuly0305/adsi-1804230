@@ -1,0 +1,68 @@
+// variables
+
+$color-menu: #02D5BF;
+$color-submenu: #208A7F ;
+$color-submenu-hover: #3567F7;
+
+$ancho-menu: 743px;
+$ancho-submenu: 160px;
+
+body {
+	font: 16px Arial;
+}
+
+section {
+	margin: 20px auto;
+	padding: 20px;
+	width: 743px;
+	nav.menu {
+		margin: 0px;
+		padding: 0px;
+		ul {
+			background-color: $color-menu;
+			list-style: none;
+			margin: 0px;
+			padding: 10px;
+			text-align: center;
+			width: $ancho-menu;
+			li {
+				color: rgba(0,0,0,.8);
+				border: 1px solid #fff;
+				display: inline-block;
+				padding: 10px;
+				position: relative;
+				transition: all 0.5s ease-in;
+				width: $ancho-submenu;
+				&:hover {
+					color: #fff;
+					background-color: $color-submenu;
+					cursor: pointer;
+				}
+				ul.submenu {
+					//display: none;
+					left: -10px;
+					opacity: 0;
+					position: absolute;
+					top: 40px;
+					transition: all 0.5s ease-out;
+					transform: scale(.5) translateY(-50px) skew(10deg);
+					width: 180px;
+				}
+				&:hover > ul.submenu {
+					//display: block;
+					opacity: 1;
+					transform: scale(1) translateX(0px) skew(0deg);
+					li{
+						display: block;
+						margin: 4px 0px;
+						&:hover {
+							background-color: $color-submenu-hover;
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}

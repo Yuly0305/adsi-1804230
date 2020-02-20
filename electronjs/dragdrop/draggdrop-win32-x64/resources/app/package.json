@@ -1,0 +1,20 @@
+{
+  "name": "DragDrop",
+  "version": "1.0.0",
+  "description": "Drag and Drop pokeballs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/yuly/adsi-1804130",
+  "keywords": [
+    "Electron",
+    "jQuery"
+  ],
+  "author": "yuly",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^6.0.7",
+    "electron-packager": "^14.0.5"
+  }
+}

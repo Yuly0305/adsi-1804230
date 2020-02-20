@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sprite Css</title>
+	<style>
+		section#sprite{
+			background: url(Imgs/descarga.png) no-repeat;
+			height: 260px;
+			margin: 80px auto;
+			width: 250px;
+		}
+		section#sprite.s1{background-position:0px -20px;}
+		section#sprite.s2{background-position:-250px -20px;} 
+		section#sprite.s3{background-position:-500px -20px;} 
+		section#sprite.s4{background-position:-750px -20px;} 
+		section#sprite.s5{background-position:-1000px -20px;} 
+		section#sprite.s6{background-position:-1250px -20px;} 
+
+
+	</style>
+</head>
+<body>
+	<h1>Sprite Css</h1>
+	<section id="sprite" class="s1">
+	</section>
+	<script>
+		var sprite = document.getElementById("sprite");
+		var actf = 1;
+		var numf = 6;
+		setInterval(function(){
+			sprite.className= '';
+			sprite.classList.add('s'+actf);
+			if(actf==numf){
+				actf=1;
+			} else	{
+				actf++;
+			}
+		}, 100);
+	</script>
+</body>
+</html>

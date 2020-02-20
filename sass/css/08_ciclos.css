@@ -1,0 +1,103 @@
+body {
+  font: 16px Tahoma;
+  margin: 0px;
+  padding: 0px;
+}
+body h1 {
+  text-align: center;
+}
+
+main ul.colors {
+  list-style: none;
+  margin: 100px auto;
+  padding: 0px;
+  width: 1066px;
+}
+main ul.colors li {
+  display: inline-block;
+  margin: 0px;
+  height: 400px;
+  transition: all 0.5s ease;
+  width: 100px;
+  /* Ciclos */
+}
+main ul.colors li:nth-child(1) {
+  background-color: #ff1400;
+}
+main ul.colors li:hover:nth-child(1) {
+  cursor: pointer;
+  background-color: #64b400;
+  transform: scale(1.1);
+}
+main ul.colors li:nth-child(2) {
+  background-color: #ff2800;
+}
+main ul.colors li:hover:nth-child(2) {
+  cursor: pointer;
+  background-color: #64a000;
+  transform: scale(1.1);
+}
+main ul.colors li:nth-child(3) {
+  background-color: #ff3c00;
+}
+main ul.colors li:hover:nth-child(3) {
+  cursor: pointer;
+  background-color: #648c00;
+  transform: scale(1.1);
+}
+main ul.colors li:nth-child(4) {
+  background-color: #ff5000;
+}
+main ul.colors li:hover:nth-child(4) {
+  cursor: pointer;
+  background-color: #647800;
+  transform: scale(1.1);
+}
+main ul.colors li:nth-child(5) {
+  background-color: #ff6400;
+}
+main ul.colors li:hover:nth-child(5) {
+  cursor: pointer;
+  background-color: #646400;
+  transform: scale(1.1);
+}
+main ul.colors li:nth-child(6) {
+  background-color: #ff7800;
+}
+main ul.colors li:hover:nth-child(6) {
+  cursor: pointer;
+  background-color: #645000;
+  transform: scale(1.1);
+}
+main ul.colors li:nth-child(7) {
+  background-color: darkorange;
+}
+main ul.colors li:hover:nth-child(7) {
+  cursor: pointer;
+  background-color: #643c00;
+  transform: scale(1.1);
+}
+main ul.colors li:nth-child(8) {
+  background-color: #ffa000;
+}
+main ul.colors li:hover:nth-child(8) {
+  cursor: pointer;
+  background-color: #642800;
+  transform: scale(1.1);
+}
+main ul.colors li:nth-child(9) {
+  background-color: #ffb400;
+}
+main ul.colors li:hover:nth-child(9) {
+  cursor: pointer;
+  background-color: #641400;
+  transform: scale(1.1);
+}
+main ul.colors li:nth-child(10) {
+  background-color: #ffc800;
+}
+main ul.colors li:hover:nth-child(10) {
+  cursor: pointer;
+  background-color: #640000;
+  transform: scale(1.1);
+}

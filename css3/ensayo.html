@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+	<title>Media Queries</title>
+	<style>
+		* {
+			transition: all 0.5s;
+		}
+		body {
+			background-color: #800000;
+			font: 20px tahoma;
+		}
+		section.main{
+			color: rgba(255,255,255,0.6);
+			margin: 20px auto;
+			padding: 10px;
+			width: 1250px;
+		}
+		section.main div.logo{
+			background: url(imgs/marvel.jpg) no-repeat center;
+			box-shadow: 0px 0px 20px rgba(128,0,0) inset,
+						4px 4px 5px #DDA2F6;
+			margin: 0px auto;
+			width: 920px;
+			height: 200px;
+		}
+		/* 4 imagenes*/
+
+		section.main section.cajas div{
+			width: 200px;
+			height: 300px;
+		}
+		section.main section.cajas {
+			margin-top: 100px;
+		}
+		section.main section.cajas div.caja1 {
+			background: url(imgs/caja1.jpg) no-repeat center;
+			box-shadow: 0px 0px 20px rgba(128,0,0) inset,
+						4px 4px 5px #6C9BE8;
+			display: inline-block;
+			background-size:contain;
+			border-radius: 80px;
+			margin-left: 100px;
+		}
+		section.main section.cajas div.caja1:hover{
+			transform: scale(1.1);
+			transition: 0.1s
+		}
+		section.main section.cajas div.caja2{
+			background: url(imgs/caja2.jpg) no-repeat center;
+			box-shadow: 0px 0px 20px rgba(128,0,0) inset,
+						4px 4px 5px #F98009;
+			display: inline-block;
+			background-size: contain; 
+			border-radius: 80px;
+			margin-left: 80px;
+		}
+		section.main section.cajas div.caja2:hover{
+			transform: scale(1.1);
+			transition: 0.1s
+		}
+		section.main section.cajas div.caja3{
+			background: url(imgs/caja3.jpg) no-repeat center;
+			box-shadow: 0px 0px 20px rgba(128,0,0) inset,
+						4px 4px 5px #186E0F;
+			display: inline-block;
+			background-size: contain;
+			border-radius: 80px;
+			margin-left: 100px;
+		}
+		section.main section.cajas div.caja3:hover{
+			transform: scale(1.1);
+			transition: 0.1s
+		}
+		section.main section.cajas div:last-child {
+			background: url(imgs/caja4.jpg) no-repeat center;
+			box-shadow: 0px 0px 20px rgba(128,0,0) inset,
+						4px 4px 5px #F04444;
+			display: inline-block;
+			border-radius: 80px;
+			background-size: contain;
+			margin-left: 80px; 
+		}
+		section.main section.cajas div.caja4:hover{
+			transform: scale(1.1);
+			transition: 0.1s
+		}
+		/* cajas con imagenes*/
+		
+		section.main section.cua1 div.im{
+			box-shadow: 4px 6px 8px #F04444;
+			margin: 20px;
+			margin-top: 60px;
+			margin-right: 70px;
+			background: url(imgs/im.jpg) no-repeat center;
+			border-radius: 20px;
+			background-size: cover;
+			display: inline-block;
+			width: 300px;
+			height: 250px;
+		}
+
+		section.main section.cua1 div.tex{
+			font-family: 'Comfortaa', cursive;
+			padding: 20px ;
+			text-align:center;
+			display: inline-block;
+			margin-top: 30px ;
+			height: 200px;
+			width: 600px;
+			vertical-align: top;
+		}
+		section.main section.cua1 div.tex h3{
+			text-shadow : 2px 3px 4px #EFC10B;
+		}
+		/* cajas con imagenes 2 */
+		section.main section.cua2 div.im2{
+			box-shadow: 4px 5px 5px #186E0F;
+			margin: 20px;
+			margin-top: 60px;
+			margin-right: 70px;
+			background: url(imgs/universo.jpg) no-repeat center;
+			border-radius: 20px;
+			background-size: cover;
+			display: inline-block;
+			width: 300px;
+			height: 250px;
+		}
+		section.main section.cua2 div.tex2{
+			font-family: 'Comfortaa', cursive;
+			padding: 20px ;
+			text-align:center;
+			display: inline-block;
+			margin-top:10px ;
+			height: 200px;
+			width: 600px;
+			vertical-align: top;
+		}
+		section.main section.cua2 div.tex2 h3{
+			text-shadow : 2px 3px 4px #EFC10B;
+		}
+
+		@media (max-width: 1024px){
+			section.main {
+				width: 640px;
+			}
+		/* modo tabla*/
+		
+		div.caja3{
+			margin: 5px;
+		}
+		section.main section.cua1 div.im{ 
+			width: 200px;
+			margin: 2px;
+			margin-top: 50px; 	
+		 }
+		section.main section.cua1 div.tex{
+			display: inline-block;
+			vertical-align: top;
+			width: 380px;
+			font: 17px tahoma;
+
+		}
+		section.main section.cua2 div.im2{ 
+			width: 200px;
+			margin: 2px;
+			margin-top: 50px; 	
+		 }
+		section.main section.cua2 div.tex2{
+			display: inline-block;
+			vertical-align: top;
+			width: 380px;
+			font: 17px tahoma;
+
+		}
+		section.main div.logo{
+				background: url(imgs/marvel2.png) no-repeat center;
+				height: 150px;
+				width: 337px;  
+		}
+		/* modo cel*/
+		@media (max-width: 720px) {
+			section.main {
+				width: 400px;
+			}
+		}
+		section.main div.logo{
+				background: url(imgs/marvel2.png) no-repeat center;
+				height: 150px;
+				width: 337px;   
+		}
+		div.caja1{
+			margin-top: -30px;
+		}
+		section.main section.cajas div.caja2{
+			margin-left: 100px;
+			margin-top: 20px;
+		}
+		section.main section.cajas div.caja3{
+			margin-left: 100px;
+			margin-top: 20px;
+		}
+		section.main section.cajas div.caja4{
+			margin-left: 100px;
+			margin-top: 20px;
+		}
+
+	</style>
+</head>
+<body>
+	<section class="main">
+		<div class="logo"></div>
+		<section class="cajas">
+			<div class="caja1">
+			</div>
+			<div class="caja2">
+			</div>
+			<div class="caja3">
+			</div>
+			<div class="caja4">
+			</div>
+		</section>
+		<section class="cua1">
+			<div class="im"></div>
+			<div class="tex"> <h3>AVENGERS</h3> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo quidem, labore asperiores! Adipisci magnam culpa, voluptas quas modi optio quaerat, ducimus incidunt? Nostrum suscipit earum consequuntur temporibus eius ratione ad.  consectetur adipisicing elit. Illo quidem, labore asperiores! Adipisci magnam culpa, voluptas quas modi optio quaerat, ducimus incidunt? Nostrum suscipit earum consequuntur temporibus </div>
+		</section>
+		<section class="cua2">
+			<div class="im2"></div>
+			<div class="tex2"> <h3>AVENGERS</h3> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo quidem, labore asperiores! Adipisci magnam culpa, voluptas quas modi optio quaerat, ducimus incidunt? Nostrum suscipit earum consequuntur temporibus eius ratione ad.  consectetur adipisicing elit. Illo quidem, labore asperiores! Adipisci magnam culpa, voluptas quas modi optio quaerat, ducimus incidunt? Nostrum suscipit earum consequuntur temporibu	</div>
+		</section>
+	</section>
+	
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>RETO</title>
+	<style>
+		body{
+			background-color: #800000;
+			padding: 10px;
+		}
+		main{
+			border: 2px solid green;
+			background: cover;
+			margin: 0px auto;
+			width: 1300px;
+			height: 1080px;
+		}
+		header div.logo{
+			display: none;
+		}
+
+		main header div.logo{
+			background: url(imgs/marvel.jpg) no-repeat center;
+			box-shadow: 0px 0px 20px rgba(128,0,0) inset,
+						4px 4px 5px #808080;
+			margin: 0px auto;
+			width: 920px;
+			height: 200px;
+
+		}
+		section.cajas div{
+			display: inline-block;
+			margin-right: 20px;
+			padding: 5px;
+			width: 250px;
+			height: 300px;
+		}
+		section.cajas {
+			margin-top: 110px;
+		}
+		section.cajas div:first-child {
+			background: url(imgs/caja1.jpg) no-repeat center;
+			box-shadow: 0px 0px 20px rgba(128,0,0) inset;
+			background-size:contain;
+			border-radius: 80px;
+			margin-left: 80px;
+		}
+		section.cajas div.caja1:hover{
+			transform: scale(1.1);
+			transition: 0.1s
+		}
+		section.cajas div.caja2{
+			background: url(imgs/caja2.jpg) no-repeat center;
+			box-shadow: 0px 0px 20px rgba(128,0,0) inset;
+			background-size: contain; 
+			border-radius: 80px;
+			margin-left: 20px;
+		}
+		section.cajas div.caja2:hover{
+			transform: scale(1.1);
+			transition: 0.1s
+		}
+		section.cajas div.caja3{
+			background: url(imgs/caja3.jpg) no-repeat center;
+			box-shadow: 0px 0px 20px rgba(128,0,0) inset;
+			background-size: contain;
+			border-radius: 80px;
+			margin-left: 20px;
+		}
+		section.cajas div.caja3:hover{
+			transform: scale(1.1);
+			transition: 0.1s
+		}
+		section.cajas div:last-child {
+			background: url(imgs/caja4.jpg) no-repeat center;
+			box-shadow: 0px 0px 20px rgba(128,0,0) inset;
+			border-radius: 80px;
+			background-size: contain;
+			margin-right: 0px;
+		}
+		section.cajas div.caja4:hover{
+			transform: scale(1.1);
+			transition: 0.1s
+		}
+		article.cajat div{
+			display: inline-block;
+			margin-right: 20px;
+			width: 260px;
+			height: 240px;
+			vertical-align: top;
+		}
+		article.cajat {
+			margin-top: -1px;
+		}
+		article.cajat div:first-child {
+			box-shadow: 0px 0px 20px rgba(128,0,0) inset,
+						0px 7px 5px #808080;
+			background-size:contain;
+			border-radius: 10px 50px;
+			margin-left: 80px;
+		}
+		article.cajat div.text2{
+			box-shadow: 0px 0px 20px rgba(128,0,0) inset,
+						0px 7px 5px #808080;
+			background-size: contain; 
+			border-radius: 10px 50px; 
+			margin-left: 20px;
+		}
+		article.cajat div.text3{
+			box-shadow: 0px 0px 20px rgba(128,0,0) inset,
+						0px 7px 5px #808080;
+			background-size: contain;
+			border-radius: 10px 50px;
+			margin-left: 20px;
+		}
+		article.cajat div:last-child {
+			box-shadow: 0px 0px 20px rgba(128,0,0) inset,
+						0px 7px 5px #808080;
+			background-size: contain;
+			border-radius: 10px 50px;
+			margin-right: 0px;
+		}
+
+		article.cajat div p {
+			font-family: 'Comfortaa', cursive;
+			color: rgba(255,255,255, .7);
+			font-size: 18px ;
+			text-align: center;
+			padding: 20px;
+		}
+		section.cajt {
+			padding: 2px;
+			margin: 0px auto;	
+			width:  1150px;
+			height: 220px;
+			margin-top: 40px;
+		}
+		
+		section div.cajt1{
+			box-shadow: 4px 5px 5px #808080;
+			margin: 20px;
+			margin-top: 50px;
+			margin-right: 70px;
+			background: url(imgs/aven.jpg) no-repeat center;
+			border-radius: 20px;
+			background-size: cover;
+			display: inline-block;
+			width: 300px;
+			height: 250px;
+		}
+		section div.cajt2 h3{
+			font-size: 30px; 	
+			color: #000;
+		}
+		section.cajt div.cajt2{
+			font-family: 'Comfortaa', cursive;
+			color: rgba(255,255,255, .7);
+			text-align:center;
+			display: inline-block;
+			margin: 20px auto ;
+			width: 750px;
+			height: 100px;
+			vertical-align: top;
+		}
+
+
+
+	</style>
+
+</head>
+<body>
+	<main>
+		<header>
+			<div class="logo"></div>
+		</header>
+	<section class="cajas">
+		<div class="caja1">
+		</div>
+		<div class="caja2">
+		</div>
+		<div class="caja3">
+		</div>
+		<div class="caja4">
+		</div>
+	
+	<article class="cajat">
+		<div class="text1">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed tempora quisquam expedita consequatur quidem, soluta assumenda veniam praesentium natus magni .</p>
+		</div>
+		<div class="text2">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed tempora quisquam expedita consequatur quidem, soluta assumenda veniam praesentium natus magni</p>
+		</div>
+		<div class="text3">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed tempora quisquam expedita consequatur quidem, soluta assumenda veniam praesentium natus magni.</p>
+		</div>
+		<div class="text4">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed tempora quisquam expedita consequatur quidem, soluta assumenda veniam praesentium natus magni.</p>
+		</div>
+	</article>
+	<section class="cajt">
+		<div class="cajt1"></div>
+		<div class="cajt2">
+			<h3>Reseña</h3>
+			<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur libero molestiae hic, sequi! Doloribus culpa illo eos sequi, iure repudiandae architecto iste, tenetur saepe consequatur quasi debitis perspiciatis aut harum.c, sequi! Doloribus culpa illo eos sequi, iure repudiandae architecto iste, tenetur saepe consc, sequi! Doloribus culpa illo eos sequi, iure repudiandae architecto iste, tenetur saepe cons  c, sequi! Doloribus culpa illo eos sequi, iure repudiandae architecto iste, tenetur saepe cons c, sequi! Doloribus culpa illo eos sequi, iure repudiandae architecto iste, tenetur saepe cons}
+			c, sequi! Doloribus culpa illo eos sequi, iure repudiandae architecto iste, tenetur saepe cons</p>
+		</div>
+	</section>
+</main>
+</body>
+</html>

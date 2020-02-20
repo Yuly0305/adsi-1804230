@@ -1,0 +1,68 @@
+main.gowar{
+	background: url(../imgs/gowar/base_cond.png) no-repeat;
+	height: 560px;
+	margin: 40px auto;
+	position: relative;
+	width: 480px;
+}		
+
+main.gowar input {
+	border: none;
+	border-radius: 25px;
+	color: 	#39CA1C;
+	font-size: 2em;
+	outline: none;
+	position: absolute;	
+	top: 150px; left: 90px;
+	text-align: center;
+	height: 50px;
+	width: 350px;
+}
+
+main.gowar figure {
+	height: 190px;
+	margin: 0px;
+	padding: 0px;
+	position:absolute;
+	top: 270px;
+	width: 198px;	
+	transition: all 0.5s ease-out;
+			
+}
+main.gowar figure:hover{
+	cursor: pointer;
+	transform: translateY(-10px);
+}
+
+main.gowar figure#female{
+	background: url(../imgs/gowar/female.png) no-repeat center;	
+	background-size: cover; 
+	left: 70px;
+}
+main.gowar figure#female.active{
+	background: url(../imgs/gowar/femaleh.png) no-repeat center;	
+}
+main.gowar figure#male{
+	background: url(../imgs/gowar/male.png) no-repeat center;	
+	background-size: cover; 
+	right: 10px;
+}
+main.gowar figure#male.active{
+	background: url(../imgs/gowar/maleh.png) no-repeat center;	
+}
+main.gowar button{
+	background: url(../imgs/gowar/btn.png) no-repeat center;	
+	border: none;
+	display: block;
+	position: absolute;
+	bottom: 30px; left: 90px;
+	transition: all 0.5s ease-in;
+	height: 50px;
+	width: 350px;
+
+}
+main.gowar button:hover {
+	background: url(../imgs/gowar/btnh.png) no-repeat center;
+	cursor: pointer;
+	transform: scale(1);
+}

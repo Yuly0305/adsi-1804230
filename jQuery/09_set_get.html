@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Metodos SET/GET (manipulacion DOM)</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<style>
+		pre.code,
+		input.input {	
+			border: 3px double #81047D;
+			display: block;
+			padding: 8px;
+			margin: 10px auto;	
+			outline: none;
+			width: 400px;
+		}
+		a.link{
+			border-bottom: 3px double #81047D;
+			color: #81047D;
+			display: block;	
+			text-align:center;	
+			margin: 10px auto;	
+			text-decoration:none;
+			width: 418px;		
+		}
+		section.options {
+			margin: 10px auto;
+			width: 418px;
+		}
+		section.options div{
+			display: inline-block;
+			width: 200px;
+		}
+		section.options div button{
+			background-color: #81047D;
+			border: none;
+			color: #fff;
+			cursor: pointer;
+			display: block;
+			margin: 2px;
+			padding: 8px;
+			width: 200px;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Metodos SET/GET (manipulacion DOM)</h1>
+		<pre class="code">
+			<ul>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>Javascript</li>
+			</ul>
+		</pre>
+		<input type="text" class="input" value="ADSI 1804230">
+		<a href="http://www.google.com" target="_blank" class="link">Enlace a google</a>
+		<br>
+		<section class="options">
+			<div class="get">
+				<h4>GET</h4>
+				<button class="btnGetText">text</button>
+				<button class="btnGetHtml">html</button>
+				<button class="btnGetVal">value</button>
+				<button class="btnGetAttr">attribute</button>
+			</div>
+			<div class="set">
+				<h4>SET</h4>
+				<button class="btnSetText">text</button>
+				<button class="btnSetHtml">html</button>
+				<button class="btnSetVal">value</button>
+				<button class="btnSetAttr">attribute</button>
+			</div>
+		</section>
+	</main>
+	<script src="js/jquery-3.4.1.js"></script>
+	<script>
+		$(document).ready(function() {
+			/*----------------*/
+			$('.btnGetText').click(function(event) {
+				alert($('.code').text());
+			});
+			/*----------------*/
+			$('.btnGetHtml').click(function(event) {
+				alert($('.code').html());
+			});
+			/*----------------*/
+			$('.btnGetVal').click(function(event) {
+				alert($('.input').val());
+			});
+			/*----------------*/
+			$('.btnGetAttr').click(function(event) {
+				alert($('.link').attr('href'));
+			});
+			/*----------------*/
+			$('.btnSetText').click(function(event) {
+				$('.code').text('PHP -Mysql -Git');
+			});
+			/*----------------*/
+			$('.btnSetHtml').click(function(event) {
+					$('.code').html('<ol><li>PHP</li><li>Mysql</li><li>Git</li></ol>');
+			});
+			$('.btnSetVal').click(function(event) {
+				$('.input').val('CENTRO DE PROCESOS INDUSTRIALESY CONSTRUCCION');
+			});
+			$('.btnSetAttr').click(function(event) {
+				$('.link').text('Enlace a facebook'); 
+				$('.link').attr('href','http://www.facebook.com');
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Funcion (Ready)</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<main>
+		<h1>Funcion (Ready)</h1>
+		<h4></h4>
+	</main>
+	<script src="js/jquery-3.4.1.js"></script>
+	<script>
+		//Todo selector de jQuery empieza con $
+		//.ready(esta listo el documento) luego sigue la funcion
+		//document hace referencia a todo el documento HTML
+		$(document).ready(function(){
+			$('h4').text('La pagina ha cargado completamente');
+		});
+
+		//Forma corta
+		$(function(){
+			//.hade oculta la info
+			//fadeIn Muestra la info
+			$('h4').hide().fadeIn(2000);		
+		});
+
+	</script>
+</body>
+</html>

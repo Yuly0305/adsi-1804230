@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Reto (Drag/Drop)</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<style>
+		section.columns{
+			background-color: #6FE9A2;
+			margin: 20px auto;
+			width: 370px; /*360*/
+		}
+		section.columns aside.column{
+			display: inline-block;
+			vertical-align: top;
+			width: 120px;
+		}
+		aside.column h4{
+			color: #fff;
+			background-color: #19A253;
+			padding: 10px;
+			margin: 0px;
+		}
+		aside.column:nth-child(1) h4{
+			border-bottom: 4px solid #E0F90A;
+		}
+		aside.column:nth-child(2) h4{
+			border-bottom: 4px solid #EFA71C;
+		}
+		aside.column:nth-child(3) h4{
+			border-bottom: 4px solid #F91B0A;
+		}
+		aside.column div{
+			background-color: #373737;
+			height: 450px;
+		}
+		aside.column div.pk{
+			height: 150px;
+			position: relative;
+			width: 120px;
+		}
+		aside.column div.pk.pk11{
+			background: url(imgs/pokemon/pk11.png) no-repeat center;
+		}
+		aside.column div.pk.pk21{
+			background:  url(imgs/pokemon/pk21.png) no-repeat center;
+
+		}
+		aside.column div.pk.pk31{
+			background: url(imgs/pokemon/pk31.png) no-repeat center;
+		}
+ 		/* aside.column div.pk.pk12{
+ 					background: url(imgs/pokemon/pk12.png) no-repeat center;
+ 					opacity: 0;
+ 				}
+ 				aside.column div.pk.pk22{
+ 					background: url(imgs/pokemon/pk22.png) no-repeat center;
+ 					opacity: 0;
+ 				}
+ 				aside.column div.pk.pk32{
+ 					background: url(imgs/pokemon/pk32.png) no-repeat center;
+ 					opacity: 0;
+ 				}
+ 		  
+ 				aside.column div.pk.pk13{
+ 					background: url(imgs/pokemon/pk13.png) no-repeat center;
+ 					opacity: 0;
+ 				}
+ 				aside.column div.pk.pk23{
+ 					background: url(imgs/pokemon/pk23.png) no-repeat center;
+ 					opacity: 0;
+ 				}
+ 				aside.column div.pk.pk33{
+ 					background: url(imgs/pokemon/pk33.png) no-repeat center;
+ 					opacity: 0;
+ 				} 
+ 		 */
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Reto (Drag/Drop)</h1>
+		<section class="columns">
+			<aside class="column">
+				<h4>Evolucion 1</h4>
+				<div class="stage stage1">
+					<div class="pk pk11"></div>
+					<div class="pk pk21"></div>
+					<div class="pk pk31"></div>
+				</div>
+			</aside>
+			<aside class="column">
+				<h4>Evolucion 2</h4>
+				<div class="stage stage2">
+				<!-- 	<div class="pk pk12"></div>
+				<div class="pk pk22"></div>
+				<div class="pk pk32"></div> -->
+				</div>
+			</aside>
+			<aside class="column">
+				<h4>Evolucion 3</h4>
+				<div class="stage stage3">
+					<!-- <div class="pk pk13"></div>
+					<div class="pk pk23"></div>
+					<div class="pk pk33"></div> -->
+				</div>
+			</aside>
+		</section>
+	</main>
+	<script src="js/jquery-3.4.1.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script>
+		$(document).ready(function() {
+
+			$('.pk').draggable({
+				containment: '.columns',
+				/*cover: 'cover',*/
+				snap:'.stage',
+				snapMode:'inner',
+				revert: 'invalid'
+			});
+			$('.stage2').droppable({
+				accept: '.pk11, .pk21 , .pk31',
+				drop:function(event,ui){
+				$drag= $(ui.draggable);
+				$drop=$(this);
+				if ($drag.hasClass('pk11')){
+					$drag.css("background","url(imgs/pokemon/pk12.png)");
+					$drag.removeClass('pk11');
+					$drag.addClass('pk12');	
+					$drag.addClass('animated rubberBand');
+				}
+				if ($drag.hasClass('pk21')){
+					$drag.css("background","url(imgs/pokemon/pk22.png)");
+					$drag.removeClass('pk21');
+					$drag.addClass('pk22');
+					$drag.addClass('animated rubberBand');
+				}	
+				if ($drag.hasClass('pk31')){
+					$drag.css("background","url(imgs/pokemon/pk32.png)");
+					$drag.removeClass('pk31');
+					$drag.addClass('pk32');
+					$drag.addClass('animated rubberBand');
+
+				}
+
+			}
+		});
+			
+			$('.stage3').droppable({
+				accept: '.pk12, .pk22 , .pk32',
+				drop:function(event,ui){
+				$drag= $(ui.draggable);
+				$drop=$(this);
+				if ($drag.hasClass('pk12')){
+					$drag.css("background","url(imgs/pokemon/pk13.png)");
+					$drag.addClass('animated wobble');
+	
+				}
+				if ($drag.hasClass('pk22')){
+					$drag.css("background","url(imgs/pokemon/pk23.png)");
+					$drag.addClass('animated wobble');	
+		
+				}	
+				if ($drag.hasClass('pk32')){
+					$drag.css("background","url(imgs/pokemon/pk33.png)");
+					$drag.addClass('animated wobble');s
+			
+				}
+			}
+		});
+	});
+	</script>
+</body>
+</html>

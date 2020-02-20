@@ -1,0 +1,45 @@
+main {
+  margin: 20px auto;
+  width: 960px;
+}
+main article {
+  display: inline-block;
+  height: 400px;
+  margin: 2px;
+  overflow: hidden;
+  width: calc(960px / 3.1);
+}
+main article figure {
+  background-color: #C6BCBC;
+  background: url(../imgs/deadpool.jpg) no-repeat center;
+  background-size: 150%;
+  height: 400px;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  transform: all 0.5s ease-in-out;
+}
+main article figure div {
+  background-color: rgba(204, 0, 0, 0.2);
+  bottom: -200px;
+  padding: 20px 0px;
+  position: absolute;
+  transition: all 0.4s 0.5s ease-in;
+  text-align: center;
+  width: calc(960px / 3.1);
+}
+main article figure div button {
+  border: 1px solid #red;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 10px;
+  width: 120px;
+}
+main article:hover figure {
+  cursor: pointer;
+  background-size: 90%;
+}
+main article:hover figure div {
+  bottom: 0px;
+}

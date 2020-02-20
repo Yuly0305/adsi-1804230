@@ -1,0 +1,19 @@
+body {
+	background-color: #AC43F5;
+	color: #461756;
+	font: 16px Tahoma;
+}
+main {
+	background-color: #EBD2F3;
+	padding: 20px;	
+	margin: 20px auto;
+	width: 600px;
+}
+main h1,
+main h2,
+main h3,
+main h4,
+main h5{
+	text-align: center;
+	border-bottom: 3px double #461756;
+}

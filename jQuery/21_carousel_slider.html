@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Carousel slider (jQuery)</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<style>
+		main{
+			width: 1024px;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Carousel slider (jQuery)</h1>
+		<section class="owl-carousel owl-theme">
+			<img src="imgs/hulk.jpg">
+			<img src="imgs/helga.jpg">
+			<img src="imgs/loki.jpg">
+			<img src="imgs/varlkiria.jpg">
+			<img src="imgs/thor.jpg">
+		</section>
+	</main>
+	<script src="js/jquery-3.4.1.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.owl-carousel').owlCarousel({
+				items: 2,
+				loop: true,
+				margin: 10,
+				nav: true
+			});		
+		});
+	</script>
+</body>
+</html>

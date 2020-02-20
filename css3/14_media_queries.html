@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Media Queries</title>
+	<style>
+		* {
+			transition: all 0.5s;
+		}
+		body {
+			background-color: #013571;
+			font: 16px tahoma;
+		}
+		section.main{
+			border: 10px solid #0177db;
+			color: rgba(255,255,255,0.6);
+			margin: 20px auto;
+			padding: 10px;
+			width: 960px;
+		}
+		section.main div.logo{
+			background: url(imgs/pepsi01.png) no-repeat;
+			background-size: contain;
+			height: 300px;
+			margin: 0px auto;
+			width: 780px;
+		}
+		section.main h1 span {
+			display: none;
+		}
+		section.main h1 span.r2,
+		section.main h1 span.r3 {
+			display: none;
+		}
+		section.main h1 span.r1 {
+			display: inline;
+		}
+		@media (max-width: 1024px){
+			section.main {
+				width: 640px;
+			}
+			section.main h1 span.r1,
+			section.main h1 span.r3 {
+				display: none;
+			}
+			section.main h1 span.r2{
+				display: inline;
+			}
+			section.main div.logo{
+				background: url(imgs/pepsi02.png) no-repeat center;
+				height: 340px;
+				width: 340px;
+		}
+		@media (max-width: 720px) {
+			section.main {
+				width: 440px;
+			}
+			section.main h1 span.r1,
+			section.main h1 span.r2 {
+				display: none;
+			}
+			section.main h1 span.r3{
+				display: inline;
+			}
+		}
+			section.main div.logo{
+				background: url(imgs/pepsi03.png) no-repeat center;
+				height: 340px;
+				width: 340px;   
+		}
+
+	</style>
+</head>
+<body>
+	<section class="main">
+		<div class="logo"></div>
+		<h1>
+			Media Queries
+			<span class="r1">( 1024px )</span>
+			<span class="r2">( 720px )</span>
+			<span class="r3">( 440px )</span>
+		</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto amet inventore atque distinctio rem voluptas voluptatum dicta impedit blanditiis hic iure perspiciatis nisi, tempore molestias dolor officiis repudiandae aliquid exercitationem laborum minus velit eligendi explicabo? Cum inventore consequatur, reiciendis nemo, aliquid et neque placeat fugit. Atque, laborum enim esse est. Pariatur repellat sequi voluptate consequatur aliquid rerum nobis, veritatis explicabo eveniet nesciunt. Aperiam repellendus error provident beatae voluptatum, in repellat nemo hic quas facere omnis porro aspernatur ab, soluta veritatis distinctio autem laboriosam. Reprehenderit esse, perspiciatis quaerat libero ipsum dolore ducimus odit incidunt odio? Voluptas aspernatur odio exercitationem quos, porro totam, alias fugit iusto corrupti, laborum sit libero incidunt! Molestiae, nulla velit soluta necessitatibus harum saepe asperiores ut molestias voluptatibus esse mollitia maxime facere. Vero sequi modi reprehenderit sit delectus dignissimos sint esse nostrum voluptatibus ad enim saepe optio totam provident iure molestiae similique id recusandae, quia in eum magnam nihil hic sunt! Voluptas sunt dolorum dignissimos architecto vitae doloribus, omnis nostrum itaque eveniet iure, quam nulla voluptate porro labore? Libero, illo aliquam labore nam maxime tempora ad deserunt velit quia fugiat perferendis in officia minima, vero, numquam alias. Quisquam amet veritatis unde id facilis error facere, enim beatae nisi!
+		</p>
+	</section>
+	
+</body>
+</html>

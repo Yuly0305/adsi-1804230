@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Direccion Flex Box</title>
+	<style>
+		body {
+			font: 16px arial;
+			color: #60F988;
+		}
+		h3{
+			border: 2px solid #DF09FF ;
+			color: #DF09FF ;
+			border-radius: 10px;
+			padding: 10px;
+		}
+		ul.fruits{
+			background-color: #de908e;
+			border-radius: 4px;
+			display: flex;
+			list-style: none;
+			height: 768px;
+			padding: 0;
+			margin: 20px 0px;
+		}
+		ul.fruits li{
+			background-color: #c9e1d3;
+			border-radius: 4px;
+			margin: 4px;			
+		}
+		/* Direccion */
+		ul.fruits.options1 {flex-direction: row;}
+		ul.fruits.options2 {flex-direction: column;}
+		ul.fruits.options3 {flex-direction: row-reverse;}
+		ul.fruits.options4 {flex-direction: column-reverse;}
+
+
+	</style>
+</head>
+<body>
+	<h1>Direccion Flex Box</h1>
+	<h3> flex-direccion: row</h3>
+	<ul class="fruits options1">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+	</ul>
+	<h3> flex-direccion: column </h3>
+	<ul class="fruits options2">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+	</ul>
+	<h3> flex-direccion: row-reverse </h3>
+	<ul class="fruits options3">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+	</ul>
+
+	<h3> flex-direccion: column-reverse </h3>
+	<ul class="fruits options4">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,27 @@
+table {
+	border: 1px solid purple;
+	/* los bordes quedan juntos no asi || */
+	border-collapse: collapse;
+	margin: 40px auto;	
+	widows: 600px;	
+}
+th, td {
+	border: 1px solid #333;	
+	padding: 10px;
+	text-align: center;
+}
+th {
+	background-color: #26B083;
+	color: #eee;
+}
+/* odd: pares
+ even : impares*/
+
+tbody tr:nth-child(even){
+	background-color: #eee;
+}
+thead input {
+	border-radius: 5px;
+	padding: 10px;	
+	border: none;
+}

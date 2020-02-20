@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos HTML</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body onload="bienvenido()" id="bd">
+	<main>
+		<h1>Eventos</h1>
+		<h4>Doble click</h4>
+		<button id="btnDC"># de doble clicks = 0</button>
+		<h4>Presionar tecla</h4>
+		<input type="text" id="iname" placeholder="Ingesar nombre completo">
+		<output id="pname"></output>
+		<h4>Redimensionar ventana</h4>
+		<output id="wbd"></output>
+		<h4> Cambiar valor</h4>
+		<select id="bgcolor">
+			<option value="">Seleccione color de fondo...</option>
+			<option value="1">Naranja</option>
+			<option value="2">Rosado</option>
+			<option value="3">Amarillo</option>
+
+		</select>
+
+	</main>
+	<script>
+		//Variables
+		var btnDC   = document.getElementById('btnDC');
+		var iname   = document.getElementById('iname');
+		var pname   = document.getElementById('pname');
+		var bd      = document.getElementById('bd');
+		var wbd     = document.getElementById('wbd');
+		var bgcolor = document.getElementById('bgcolor');
+		var cntDC   = 0;
+
+		//Eventos
+		btnDC.ondbclick= function(){
+			this.innerHTML = "# de doble clicks = "+cntDC;
+		}
+		iname.onkeydown = function(){
+			pname.innerHTML += this.value;
+		} 
+		bd.onresize = function(){
+			wbd.innerHTML = "Ancho de la ventana: "window.outerWidth+"px"();
+		}
+		bgcolor.onchange = function(){
+			if(this.value == ''){
+				bd.style.backgroundColor = "white";
+			}
+			if(this.value == '1'){
+				bd.style.backgroundColor = "orange";
+			}
+			if(this.value == '2'){
+				bd.style.backgroundColor = "pink";
+			}
+			if(this.value == '3'){
+				bd.style.backgroundColor = "yellow";
+			}
+
+		}
+
+		//Funciones
+		function bienvenido(){
+			alert('Bienvenidos:\n La pagina a cargado con exito');
+
+		}
+
+	</script>
+</body>
+</html>
